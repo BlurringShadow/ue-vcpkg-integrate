@@ -1,3 +1,0 @@
-E:\BlurringShadow\Documents\Learning\ue-vcpkg-integrate\Host\Intermediate\Build\Win64\UE4Editor\Development\Host\Definitions.Host.h
-E:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-E:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
