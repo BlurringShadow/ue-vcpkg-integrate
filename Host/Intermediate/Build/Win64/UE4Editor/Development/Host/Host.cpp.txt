@@ -1,0 +1,2 @@
+E:\BlurringShadow\Documents\Learning\ue-vcpkg-integrate\Host\Intermediate\Build\Win64\UE4Editor\Development\Host\Definitions.Host.h
+E:\BlurringShadow\Documents\Learning\ue-vcpkg-integrate\Host\Source\Host\Host.h

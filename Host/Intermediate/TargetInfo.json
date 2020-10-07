@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Host",
+			"Path": "E:\\BlurringShadow\\Documents\\Learning\\ue-vcpkg-integrate\\Host\\Source\\Host.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "HostEditor",
+			"Path": "E:\\BlurringShadow\\Documents\\Learning\\ue-vcpkg-integrate\\Host\\Source\\HostEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

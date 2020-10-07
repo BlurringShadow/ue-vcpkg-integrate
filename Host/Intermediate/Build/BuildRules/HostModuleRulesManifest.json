@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\BlurringShadow\\Documents\\Learning\\ue-vcpkg-integrate\\Host\\Source\\Host\\Host.Build.cs",
+		"E:\\BlurringShadow\\Documents\\Learning\\ue-vcpkg-integrate\\Host\\Source\\Host.Target.cs",
+		"E:\\BlurringShadow\\Documents\\Learning\\ue-vcpkg-integrate\\Host\\Source\\HostEditor.Target.cs"
+	],
+	"EngineVersion": "4.25.3"
+}
