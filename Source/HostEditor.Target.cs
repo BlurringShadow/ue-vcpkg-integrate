@@ -1,14 +1,9 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 using UnrealBuildTool;
 using System.Collections.Generic;
 
-public class HostEditorTarget : TargetRules
+public class HostEditorTarget : TargetBase
 {
-	public HostEditorTarget( TargetInfo Target) : base(Target)
-	{
-		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.AddRange( new string[] { "Host" } );
-	}
+    public HostEditorTarget(TargetInfo target) : base(target, TargetType.Editor)
+    {
+    }
 }
