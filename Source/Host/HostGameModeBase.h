@@ -2,16 +2,13 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include <CoreMinimal.h>
+#include <GameFramework/GameModeBase.h>
+
 #include "HostGameModeBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
-class HOST_API AHostGameModeBase : public AGameModeBase
+class HOST_API AHostGameModeBase final : public AGameModeBase
 {
-	GENERATED_BODY()
-	
+    GENERATED_BODY()
 };
