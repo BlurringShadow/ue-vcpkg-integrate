@@ -11,4 +11,6 @@ UCLASS()
 class HOST_API AHostGameModeBase final : public AGameModeBase
 {
     GENERATED_BODY()
+
+    void StartPlay() override;
 };
