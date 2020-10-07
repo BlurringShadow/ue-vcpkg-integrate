@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "MacroHeaderGenerator": {
-      "commandName": "Project",
-      "commandLineArgs": "\"E:\\Program Files\\Epic Games\\UE_4.25\""
-    }
-  }
-}
