@@ -8,12 +8,9 @@ void AHostGameModeBase::StartPlay()
             -1,
             5.0f,
             FColor::Yellow,
-            "Hello World??"
-            /*
             fmt::format(
                 u8"{} Hello World",
                 to_iso_extended_string(boost::posix_time::microsec_clock::local_time())
             ).c_str()
-            */
         );
 }
