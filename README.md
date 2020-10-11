@@ -10,9 +10,9 @@ A simple unreal engine project template to support C++17 standard and [vcpkg](ht
     - runtime dependencies: 
       [your_export]/installed/[platform]/bin -> 
       [this_project]/Plugin/VcpkgIntegrate/Source/VcpkgIntegrate/[platform]/bin
-    - lib(Win64 specific): 
-      [your_export]/installed/[platform]/bin -> 
-      [this_project]/Plugin/VcpkgIntegrate/Source/VcpkgIntegrate/[platform]/bin
+    - lib: 
+      [your_export]/installed/[platform]/lib -> 
+      [this_project]/Plugin/VcpkgIntegrate/Source/VcpkgIntegrate/[platform]/lib
 3. Let unreal engine to regenerate your project flies.
 
 ## Structure
