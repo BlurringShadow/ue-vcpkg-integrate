@@ -2,17 +2,9 @@
 
 using UnrealBuildTool;
 
-public class Host : ModuleRules
+public class Host : BaseModuleRules
 {
-    public Host(ReadOnlyTargetRules Target) : base(Target)
+    public Host(ReadOnlyTargetRules Target) : base(Target, true, "Core", "CoreUObject", "Engine", "InputCore", "VcpkgIntegrate")
     {
-        PublicDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "VcpkgIntegrate" });
-
-        PCHUsage = PCHUsageMode.NoSharedPCHs;
-        PrivatePCHHeaderFile = "Host.h";
-        PublicSystemIncludePaths.Add(ModuleDirectory);
-        CppStandard = CppStandardVersion.Cpp17;
-        bUseUnity = false;
-        MinFilesUsingPrecompiledHeaderOverride = 1;
     }
 }

@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include <CoreMinimal.h>
+#include "Host.h"
 #include <GameFramework/GameModeBase.h>
 
 // Third party

@@ -1,23 +1,28 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnrealBuildTool;
 
-public class VcpkgIntegrate : ModuleRules
+public class BaseModuleRules : ModuleRules
 {
-    public VcpkgIntegrate(ReadOnlyTargetRules target) : base(target)
+    public BaseModuleRules(ReadOnlyTargetRules target, bool isModulePublic = true, params string[] dependencyModuleNames) : base(target)
     {
-        PublicDependencyModuleNames.Add("Core");
+        PublicDependencyModuleNames.AddRange(dependencyModuleNames);
+        if (isModulePublic) PublicSystemIncludePaths.Add(ModuleDirectory);
+        bUseUnity = false;
+        PCHUsage = PCHUsageMode.NoPCHs;
+    }
+}
+
+
+public class VcpkgIntegrate : BaseModuleRules
+{
+    public VcpkgIntegrate(ReadOnlyTargetRules target) : base(target, true, "Core")
+    {
         OptimizeCode = CodeOptimization.Always;
         Type = ModuleType.CPlusPlus;
         PrecompileForTargets = PrecompileTargetsType.Game;
-        PCHUsage = PCHUsageMode.NoPCHs;
-        bUseUnity = false;
-        CppStandard = CppStandardVersion.Cpp17;
-        PublicSystemIncludePaths.Add(ModuleDirectory);
 
         SetDependency(target.Platform);
     }
@@ -45,7 +50,7 @@ public class VcpkgIntegrate : ModuleRules
             RuntimeDependencies.Add(Path.Combine("$(BinaryOutputDir)", Path.GetFileName(path)), path);
     }
 
-    IEnumerable<string> GetPathsByExtension(string libPath, string extension)
+    static IEnumerable<string> GetPathsByExtension(string libPath, string extension)
     {
         return Directory.GetFiles(libPath, "*." + extension);
     }

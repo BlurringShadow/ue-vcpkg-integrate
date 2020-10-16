@@ -11,11 +11,24 @@ public abstract class TargetBase : TargetRules
         base(target)
     {
         Type = type;
+        bOverrideBuildEnvironment = true;
+
+        // compatibility for vs2019 preview
         DefaultBuildSettings = BuildSettingsVersion.V2;
         bLegacyPublicIncludePaths = false;
-        bOverrideBuildEnvironment = true;
-        // to enable exception
+
         bForceEnableExceptions = true;
+
+        CppStandard = CppStandardVersion.Cpp17;
+
+        #region disable pch and iwyu
+
+        bUsePCHFiles = false;
+        bEnforceIWYU = false;
+        bIWYU = false;
+
+        #endregion
+
         ExtraModuleNames.Add(ProjectModuleName);
         if (extraModuleNames != null) ExtraModuleNames.AddRange(extraModuleNames);
     }
